@@ -1,5 +1,29 @@
        1. [Vector-Sort](https://www.hackerrank.com/challenges/vector-sort/problem?isFullScreen=true)
 ```cpp
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int size;
+    cin >> size;
+    
+    vector <int> v(size);
+    for (int i =0; i<size; i++){
+        cin >> v[i];
+    }
+    sort(v.begin(),v.end());
+    
+    for (int k = 0; k <size; k++){
+        cout << v[k] << " ";
+    }
+       
+    return 0;
+}
 
 ```
 2. [Strings](https://www.hackerrank.com/challenges/c-tutorial-strings/problem?isFullScreen=true)
