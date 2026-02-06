@@ -227,4 +227,41 @@ int main() {
     
     return 0;
 }
-``` 
+```
+7. [Vector Erase](https://www.hackerrank.com/challenges/vector-erase/problem?isFullScreen=true)
+```cpp
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int size ;
+    cin >> size;
+    vector<int>numArr;
+    for (int i=0; i<size; i++){
+        int x;
+        cin >> x;
+        numArr.push_back(x);
+    }
+    int index;
+    int start;
+    int end;
+    cin >> index >> start >> end;
+    
+    numArr.erase(numArr.begin()+index-1);
+    numArr.erase(numArr.begin()+start-1,numArr.begin()+end-1);
+    
+    cout << numArr.size() << "\n";
+    
+    for(int i=0; i<numArr.size(); i++){
+        cout << numArr[i]<< " ";
+    }
+    return 0;
+}
+
+```
+ 
