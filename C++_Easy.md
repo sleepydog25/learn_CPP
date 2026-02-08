@@ -339,4 +339,43 @@ int main(){
 }
 
 ```
-10. 
+10. [Lower Bound-STL](https://www.hackerrank.com/challenges/cpp-lower-bound/problem)
+```cpp
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    int size;
+    cin >> size;
+
+    vector<int> nums(size);
+    for (int i = 0; i < size; i++) {
+        cin >> nums[i];
+    }
+
+    int queryNums;
+    cin >> queryNums;
+
+    for (int i = 0; i < queryNums; i++) {
+        int temp;
+        cin >> temp;
+
+        auto ans = lower_bound(nums.begin(), nums.end(), temp);
+        int idx = ans - nums.begin() + 1;
+
+        if (ans != nums.end() && *ans == temp) {
+            cout << "Yes " << idx << '\n';
+        } else {
+            cout << "No " << idx << '\n';
+        }
+    }
+
+    return 0;
+}
+```
+11. 
